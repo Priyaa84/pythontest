@@ -1,0 +1,45 @@
+#Python program to find the frequency of words.
+from collections import Counter
+def word_count(fname):
+    with open(fname) as f:
+        return Counter(f.read().split())
+print('Number of word counts in file:',word_count("test.txt"))
+
+#Opening a file
+file = open("test.txt", "r")
+Counter = 0
+
+# Reading from file
+Content = file.read()
+CoList = Content.split("\n")
+
+for i in CoList:
+    if i:
+        Counter += 1
+
+print("This is the number of lines in the file:",Counter)
+
+
+# creating variable to store the
+# number of words
+number_of_words = 0
+
+# Opening our text file in read only
+# mode using the open() function
+with open(r'test.txt', 'r') as file:
+    # Reading the content of the file
+    # using the read() function and storing
+    # them in a new variable
+    data = file.read()
+
+    # Splitting the data into separate lines
+    # using the split() function
+    lines = data.split()
+
+    # Adding the length of the
+    # lines in our number_of_words
+    # variable
+    number_of_words += len(lines)
+
+# Printing total number of words
+print("Number of words:", number_of_words)
