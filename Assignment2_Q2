@@ -1,9 +1,8 @@
 #Python program to find the frequency of words.
-
 from collections import Counter
 def word_count(fname):
     with open(fname) as f:
-        return Counter(f.read.split())
+        return Counter(f.read().split())
 print('Number of word counts in file:',word_count("test.txt"))
 
 
