@@ -5,6 +5,21 @@ def word_count(fname):
         return Counter(f.read().split())
 print('Number of word counts in file:',word_count("test.txt"))
 
+#Opening a file
+file = open("test.txt", "r")
+Counter = 0
+
+# Reading from file
+Content = file.read()
+CoList = Content.split("\n")
+
+for i in CoList:
+    if i:
+        Counter += 1
+
+print("This is the number of lines in the file:",Counter)
+
+
 # creating variable to store the
 # number of words
 number_of_words = 0
@@ -27,4 +42,4 @@ with open(r'test.txt', 'r') as file:
     number_of_words += len(lines)
 
 # Printing total number of words
-print("Number of words:" , number_of_words)
+print("Number of words:", number_of_words)
